@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 300,
+  "title": "Water Use per Capita by State/Territory in Australia (2021-22)",
+  "projection": {
+    "type": "equirectangular",
+    "center": [133, -28],
+    "scale": 480
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/js/ne_1.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_1_states_provinces"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/water_account.csv"
+            },
+            "key": "Geography Description",
+            "fields": ["2021-22", "Total Amount", "Population"]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "2021-22",
+          "type": "quantitative",
+          "title": "Amount (ML)",
+          "scale": {
+            "type": "threshold",
+            "domain": [500, 1000, 1500, 3000, 5000],
+            "scheme": "yellowgreenblue"
+          }
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "State/Territory"},
+          {"field": "Total Amount", "type": "quantitative", "title": "Total Water Usage (ML)", "format": ",.0f"},
+          {"field": "Population", "type": "quantitative", "title": "Population", "format": ",.0f"},
+          {"field": "2021-22", "type": "quantitative", "title": "Water Use per Capita (ML)", "format": ",.2f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/js/ne_1.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_1_states_provinces"
+        }
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 0,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {"field": "properties.longitude", "type": "quantitative"},
+        "latitude": {"field": "properties.latitude", "type": "quantitative"},
+        "text": {"field": "properties.postal"},
+        "color": {"value": "black"}
+      }
+    }
+  ]
+}

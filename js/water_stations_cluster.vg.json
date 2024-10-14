@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":"container",
+    "height": 300,
+    "title": "Water Stations around Australia",
+    "projection": {"type": "equirectangular"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/aus_map.json",
+          "format": {"type": "topojson", "feature": "collection"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/water_stations_centroids.csv"
+        },
+        "mark": {"type": "circle"},
+        "encoding": {
+            "tooltip": [
+                {"field": "Data Owner", "type": "nominal", "title": "Water Station Owner"},
+                {"field": "Count", "type": "quantitative", "title": "# of Stations", "format": ","},
+                {"field": "Percentage", "type": "quantitative", "title": "% within State"}
+              ],
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
+          "size": {
+              "field": "Stations",
+              "type": "quantitative"
+          },
+          "color": {
+            "field": "Location",
+            "scale": {"scheme": "yellowgreenblue"}
+          }
+        } 
+      }
+    ]
+  }
