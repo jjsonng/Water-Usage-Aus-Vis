@@ -108,28 +108,108 @@
     {
       "mark": {
         "type": "rule",
-        "strokeDash": [4, 4],
+        "strokeDash": [6, 4],
+        "size": 2,
         "color": "red"
       },
       "encoding": {
-        "x": {"datum": "2020-21"}
-      }
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "TotalValue", "type": "quantitative"},
+        "opacity": {
+          "condition": {"test": "datum.is_min", "value": 1},
+          "value": 0
+        }
+      },
+      "transform": [
+        {
+          "fold": [
+            "Agriculture, forestry and fishing",
+            "Households",
+            "Manufacturing",
+            "Mining",
+            "Other industries"
+          ],
+          "as": ["Industry", "Value"]
+        },
+        {
+          "calculate": "replace(datum.Value, ',', '')",
+          "as": "Value"
+        },
+        {
+          "calculate": "toNumber(datum.Value)",
+          "as": "Value"
+        },
+        {
+          "filter": "Industry_selection == null || datum.Industry == Industry_selection"
+        },
+        {
+          "aggregate": [{"op": "sum", "field": "Value", "as": "TotalValue"}],
+          "groupby": ["Year"]
+        },
+        {
+          "window": [{"op": "min", "field": "TotalValue", "as": "MinValue"}],
+          "frame": [null, null]
+        },
+        {
+          "calculate": "datum.TotalValue == datum.MinValue",
+          "as": "is_min"
+        }
+      ]
     },
     {
       "mark": {
         "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -5,
+        "align": "center",
+        "baseline": "bottom",
         "dy": -10,
-        "fontSize": 9
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "red"
       },
       "encoding": {
-        "x": {"datum": "2020-21"},
-        "y": {"datum": 8000},
-        "text": {"value": "Lowest water usage"},
-        "color": {"value": "red"}
-      }
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "TotalValue", "type": "quantitative"},
+        "text": {"value": "Lowest Usage"},
+        "opacity": {
+          "condition": {"test": "datum.is_min", "value": 1},
+          "value": 0
+        }
+      },
+      "transform": [
+        {
+          "fold": [
+            "Agriculture, forestry and fishing",
+            "Households",
+            "Manufacturing",
+            "Mining",
+            "Other industries"
+          ],
+          "as": ["Industry", "Value"]
+        },
+        {
+          "calculate": "replace(datum.Value, ',', '')",
+          "as": "Value"
+        },
+        {
+          "calculate": "toNumber(datum.Value)",
+          "as": "Value"
+        },
+        {
+          "filter": "Industry_selection == null || datum.Industry == Industry_selection"
+        },
+        {
+          "aggregate": [{"op": "sum", "field": "Value", "as": "TotalValue"}],
+          "groupby": ["Year"]
+        },
+        {
+          "window": [{"op": "min", "field": "TotalValue", "as": "MinValue"}],
+          "frame": [null, null]
+        },
+        {
+          "calculate": "datum.TotalValue == datum.MinValue",
+          "as": "is_min"
+        }
+      ]
     }
   ],
   "selection": {
