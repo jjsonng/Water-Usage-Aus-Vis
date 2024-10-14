@@ -39,7 +39,7 @@
       "color": {
         "field": "State",
         "scale": {"domain":["Australian Capital Territory", "New South Wales", "Northern Territory", "Queensland", "South Australia", "Tasmania", "Victoria", "Western Australia"],
-      "range": ["#f46a9b", "#ef9b20", "#edbf33", "#ede15b", "#bdcf32", "#87bc45", "#27aeef", "#b33dc6"]}
+      "range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255"]}
       },
       "tooltip": [
         {"field": "State", "type": "nominal", "title": "Region"},
