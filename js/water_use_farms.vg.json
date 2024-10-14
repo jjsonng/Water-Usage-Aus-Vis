@@ -31,7 +31,7 @@
             "Northern Territory",
             "Australian Capital Territory"
           ],
-          "name": "State Selection: "
+          "name": "State: "
         }
       },
       {
@@ -50,7 +50,7 @@
             "Area watered (ha)",
             "Volume applied (ML)"
           ],
-          "name": "Measurement Selection: "
+          "name": "Measurement: "
         }
       }
     ],
@@ -61,14 +61,13 @@
     "mark": "bar",
     "encoding": {
       "x": {"field": "Category", "type": "nominal", "axis": null},
-      "y": {"aggregate": "sum", "field": "Estimate"},
+      "y": {"aggregate": "sum", "field": "Estimate", "axis": {"title": "Total Amount"}},
       "color": {
         "field": "Category",
-        "scale": {"scheme": "yellowgreenblue"},
-        "legend": null
+        "scale": {"range": ["#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255","#888888"]},
+        "legend": {"title": "Categories"}
       },
       "tooltip": [
-        {"field": "Region", "type": "nominal", "title": "State"},
         {"field": "Category", "type": "nominal"},
         {"field": "Estimate", "type": "quantitative", "title": "Amount", "format": ","}
       ]
