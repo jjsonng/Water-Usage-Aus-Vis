@@ -56,7 +56,7 @@
               "Households",
               "Agriculture, forestry and fishing"
             ],
-            "range": ["#E4645D", "#811B19", "#CD7D2B", "#274B6F", "#63a7cd"]
+            "range": ["#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288"]
           },
           "legend": {
             "title": "Industry",
