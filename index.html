@@ -164,21 +164,6 @@
           <div id="vis8" class="vis-container"></div>
         </div>
     </div>
-
-  <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h3>Freshwater efficiency use for households and public services</h3>
-            <p>Water used for home, household, or public functions is referred to as <span class="text">municipal water</span>. This is the most 'visible' type of water: the water we drink, clean with, wash with, and cook with.</p> 
-            <p>Germany's domestic water consumption are the highest, at about 500US$/m^3, which is surprising due to the total amount of water they withdraw.</p> 
-            <p>In terms of India, with the world's largest water withdrawal, does not utilise their water resources within services as much.</p> 
-            <p>Despite having a far smaller population, <span class="text">Australia uses a substantial amount</span> with around 200US$/m^3</p>
-          </div>
-        </div>
-        <div class="pure-u-2-3">
-          <div id="vis9" class="vis-container"></div>
-        </div>
-    </div>
    
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
@@ -205,7 +190,6 @@
   var specVis6 = "js/water_supply.vg.json";
   var specVis7 = "js/water_use.vg.json";
   var specVis8 = "js/world_water_withdrawal.vg.json";
-  var specVis9 = "js/world_water_use_services.vg.json";
   
 
 
@@ -244,12 +228,7 @@
   vegaEmbed('#vis8', specVis8, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
-
-  vegaEmbed('#vis9', specVis9, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
   
-
 
 </script>
 </body>
