@@ -11,7 +11,7 @@
       "name": "Water_Withdrawal_Above",
 
       "value": 0,
-      "bind": {"input": "range", "min": 0, "max": 700, "step": 10}
+      "bind": {"input": "range", "min": 0, "max": 700, "step": 10, "name": "Water Withdrawal"}
     },
     {
       "name": "Continent_selection",
@@ -33,7 +33,7 @@
           "Asia",
           "Oceania"
         ],
-        "name": "Continent Selection: "
+        "name": "Continent: "
       }
     }
   ],
@@ -68,8 +68,8 @@
       "type": "point"
     }, "encoding": {
     "size": {"field": "Withdrawal", "type": "quantitative",  "scale": {"range": [30, 500]}},
-    "fill": {"field": "Continent",  "type": "nominal","scale": {"domain":["Americas", "Europe", "Africa", "Asia", "Oceania"], "range": ["#63a7cd", "#7ccad4", "#b4e1ce", "#647db9", "#3ea593"]}},
-    "color": {"field": "Continent", "type": "nominal","scale": {"domain":["Americas", "Europe", "Africa", "Asia", "Oceania"],"range": ["#63a7cd", "#7ccad4", "#b4e1ce", "#647db9", "#3ea593"]}
+    "fill": {"field": "Continent",  "type": "nominal","scale": {"domain":["Americas", "Europe", "Africa", "Asia", "Oceania"], "range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499"]}},
+    "color": {"field": "Continent", "type": "nominal","scale": {"domain":["Americas", "Europe", "Africa", "Asia", "Oceania"],"range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499"]}
     }
     }},
       {
