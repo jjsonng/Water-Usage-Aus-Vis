@@ -1,0 +1,180 @@
+"Country","Area","Withdrawal","Continent","Ranking"
+"Afghanistan",65286,20.3729,"Asia",0
+"Albania",2773,1.4198,"Europe",0
+"Algeria",238174,10.462,"Africa",0
+"Angola",124670,0.7058,"Africa",0
+"Antigua and Barbuda",44,0.0115,"Americas",0
+"Argentina",278040,37.78,"Americas",0
+"Armenia",2974,2.8658,"Asia",0
+"Australia",774122,16.554,"Oceania",1
+"Austria",8387.9,3.4921,"Europe",0
+"Azerbaijan",8660,12.7816,"Asia",0
+"Bahrain",78,0.4344,"Asia",0
+"Bangladesh",14797.7,35.87,"Asia",0
+"Barbados",43,0.081,"Americas",0
+"Belarus",20760,1.397,"Europe",0
+"Belgium",3053,3.994,"Europe",0
+"Belize",2297,0.101,"Americas",0
+"Benin",11476,0.234,"Africa",0
+"Bhutan",3839.4,0.338,"Asia",0
+"Bolivia (Plurinational State of)",109858,2.088,"Americas",0
+"Botswana",58173,0.193,"Africa",0
+"Brazil",851577,65.681,"Americas",0
+"Brunei Darussalam",577,0.092,"Asia",0
+"Bulgaria",11100,5.6585,"Europe",0
+"Burkina Faso",27422,0.818,"Africa",0
+"Burundi",2783,0.2801,"Africa",0
+"Cabo Verde",403,0.027,"Africa",0
+"Cambodia",18104,2.184,"Asia",0
+"Cameroon",47544,1.0884,"Africa",0
+"Canada",987975,35.597,"Americas",0
+"Central African Republic",62298,0.0725,"Africa",0
+"Chad",128400,0.8796,"Africa",0
+"Chile",75609.6,35.431,"Americas",0
+"China",960001.08,598.1,"Asia",0
+"Colombia",114174.9,13.611,"Americas",0
+"Comoros",186.1,0.01,"Africa",0
+"Congo",34200,0.0917,"Africa",0
+"Costa Rica",5110,3.194,"Americas",0
+"Côte d'Ivoire",32246,1.162,"Africa",0
+"Croatia",5722,0.715,"Europe",0
+"Cuba",10747,6.959,"Americas",0
+"Cyprus",925,0.311,"Asia",0
+"Czechia",7887,1.6304,"Europe",0
+"Democratic People's Republic of Korea",12054,8.6578,"Asia",0
+"Democratic Republic of the Congo",234486,0.6836,"Africa",0
+"Denmark",4093,0.7411,"Europe",0
+"Djibouti",2320,0.019,"Africa",0
+"Dominica",75,0.02,"Americas",0
+"Dominican Republic",4867,9.0779,"Americas",0
+"Ecuador",25637,9.918,"Americas",0
+"Egypt",100145,77.5,"Africa",0
+"El Salvador",2104,2.118,"Americas",0
+"Equatorial Guinea",2805,0.0198,"Africa",0
+"Eritrea",11760,0.582,"Africa",0
+"Estonia",4534,1.7849,"Europe",0
+"Eswatini",1736,1.068,"Africa",0
+"Ethiopia",110430,10.5481,"Africa",0
+"Fiji",1827,0.0849,"Oceania",0
+"Finland",33845,1.867,"Europe",0
+"France",54908.7,26.438,"Europe",0
+"Gabon",26767,0.1391,"Africa",0
+"Gambia",1130,0.1016,"Africa",0
+"Georgia",6970,1.823,"Asia",0
+"Germany",35725,24.4377,"Europe",0
+"Ghana",23854,1.4646,"Africa",0
+"Greece",13196,11.2403,"Europe",0
+"Grenada",34,0.0141,"Americas",0
+"Guatemala",10889,3.3241,"Americas",0
+"Guinea",24586,0.5739,"Africa",0
+"Guinea-Bissau",3613,0.19,"Africa",0
+"Guyana",21497,1.4447,"Americas",0
+"Haiti",2775,1.45,"Americas",0
+"Honduras",11249,1.607,"Americas",0
+"Hungary",9303,4.5011,"Europe",0
+"Iceland",10300,0.2783,"Europe",0
+"India",328725.9,761,"Asia",1
+"Indonesia",197952.9,222.635,"Asia",0
+"Iran (Islamic Republic of)",174515,93.3,"Asia",0
+"Iraq",43505.2,38.55,"Asia",0
+"Ireland",7028,0.861,"Europe",0
+"Israel",2207,2.304,"Asia",0
+"Italy",30134,34.188,"Europe",0
+"Jamaica",1099,1.354,"Americas",0
+"Japan",37797,81.45,"Asia",0
+"Jordan",8932,1.0441,"Asia",0
+"Kazakhstan",272490.2,24.451,"Asia",0
+"Kenya",58037,4.032,"Africa",0
+"Kuwait",1782,1.25,"Asia",0
+"Kyrgyzstan",19995,7.66,"Asia",0
+"Lao People's Democratic Republic",23680,7.32,"Asia",0
+"Latvia",6457,0.1811,"Europe",0
+"Lebanon",1045,1.84,"Asia",0
+"Lesotho",3036,0.0438,"Africa",0
+"Liberia",11137,0.1459,"Africa",0
+"Libya",175954,5.83,"Africa",0
+"Lithuania",6528.6,0.259,"Europe",0
+"Luxembourg",259,0.0456,"Europe",0
+"Madagascar",58729.5,13.5569,"Africa",0
+"Malawi",11848,1.3568,"Africa",0
+"Malaysia",33080,5.488,"Asia",0
+"Maldives",30,0.0059,"Asia",0
+"Mali",124019,5.186,"Africa",0
+"Malta",32,0.0638,"Europe",0
+"Mauritania",103070,1.3502,"Africa",0
+"Mauritius",204,0.616,"Africa",0
+"Mexico",196438,87.844,"Americas",0
+"Mongolia",156411.62,0.4624,"Asia",0
+"Montenegro",1381,0.1609,"Europe",0
+"Morocco",44655,10.431,"Africa",0
+"Mozambique",79938,1.473,"Africa",0
+"Myanmar",67663,33.3914,"Asia",0
+"Namibia",82429,0.288,"Africa",0
+"Nepal",14718,9.4971,"Asia",0
+"Netherlands",3739,16.0765,"Europe",0
+"New Zealand",26771,5.201,"Oceania",0
+"Nicaragua",13037,1.5446,"Americas",0
+"Niger",126700,1.7509,"Africa",0
+"Nigeria",92377,12.475,"Africa",0
+"North Macedonia",2571,0.832527289,"Europe",0
+"Norway",38520.8,2.6912,"Europe",0
+"Oman",30950,1.872,"Asia",0
+"Pakistan",79610,183.45,"Asia",0
+"Palestine",602,0.3752,"Asia",0
+"Panama",7520,1.2114,"Americas",0
+"Papua New Guinea",46284,0.3921,"Oceania",0
+"Paraguay",40675.2,2.413,"Americas",0
+"Peru",128522,16.1036,"Americas",0
+"Philippines",30000,92.749,"Asia",0
+"Poland",31270,10.081,"Europe",0
+"Portugal",9222.56,11.1781,"Europe",0
+"Puerto Rico",887,3.2745,"Americas",0
+"Qatar",1149,0.9126,"Asia",0
+"Republic of Korea",10031,27.082,"Asia",0
+"Republic of Moldova",3385,0.84,"Europe",0
+"Romania",23840,6.773,"Europe",0
+"Russian Federation",1709825,64.41,"Europe",0
+"Rwanda",2634,0.1839,"Africa",0
+"Saint Kitts and Nevis",26,0.0156,"Americas",0
+"Saint Lucia",62,0.0429,"Americas",0
+"Saint Vincent and the Grenadines",39,0.008502,"Americas",0
+"Sao Tome and Principe",96,0.0409,"Africa",0
+"Saudi Arabia",214969,23.35,"Asia",0
+"Senegal",19671,2.221,"Africa",0
+"Serbia",8836,5.3773,"Europe",0
+"Seychelles",46,0.0137,"Africa",0
+"Sierra Leone",7230,0.2122,"Africa",0
+"Singapore",71.9,0.6594,"Asia",0
+"Slovakia",4903,0.5563,"Europe",0
+"Slovenia",2026.64,0.9314,"Europe",0
+"Somalia",63766,3.298,"Africa",0
+"South Africa",121909,19.38,"Africa",0
+"South Sudan",64433,0.658,"Africa",0
+"Spain",50593.523,31.216,"Europe",0
+"Sri Lanka",6561,12.946,"Asia",0
+"Sudan",187936,26.935,"Africa",0
+"Suriname",16382,0.6159,"Americas",0
+"Sweden",44743,2.375,"Europe",0
+"Switzerland",4129.039,1.7338,"Europe",0
+"Syrian Arab Republic",18518,16.7604,"Asia",0
+"Tajikistan",14138,11.4948,"Asia",0
+"Thailand",51312,57.306,"Asia",0
+"Timor-Leste",1487,1.172,"Asia",0
+"Togo",5679,0.223,"Africa",0
+"Trinidad and Tobago",513,0.3832,"Americas",0
+"Tunisia",16361,4.875,"Africa",0
+"Turkey",78535,58.964,"Asia",0
+"Turkmenistan",48810,27.954,"Asia",0
+"Uganda",24155,0.637,"Africa",0
+"Ukraine",60355,9.18,"Europe",0
+"United Arab Emirates",7102,3.998,"Asia",0
+"United Kingdom",24361,8.42,"Europe",0
+"United Republic of Tanzania",94730,5.184,"Africa",0
+"United States of America",983334,444.29,"Americas",0
+"Uruguay",17622,3.66,"Americas",0
+"Uzbekistan",44740,58.9,"Asia",0
+"Venezuela (Bolivarian Republic of)",91205,22.6263,"Americas",0
+"Viet Nam",33123,82.03,"Asia",0
+"Yemen",52797,3.565,"Asia",0
+"Zambia",75261,1.572,"Africa",0
+"Zimbabwe",39076,3.3391,"Africa",0

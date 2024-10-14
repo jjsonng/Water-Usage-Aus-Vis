@@ -1,0 +1,17 @@
+Region Code,Region,Estimate,Type,Abb
+1,New South Wales,1410463.68,Water source,NSW
+2,Victoria,1503186.47,Water source,VIC
+3,Queensland,1987653.18,Water source,QLD
+4,South Australia,795024.52,Water source,SA
+5,Western Australia,357614.25,Water source,WA
+6,Tasmania,361193.88,Water source,TAS
+7,Northern Territory,49109.3,Water source,NT
+8,Australian Capital Territory,300.89,Water source,ACT
+1,New South Wales,1646369.09,Water use,NSW
+2,Victoria,1760699.74,Water use,VIC
+3,Queensland,2121945.12,Water use,QLD
+4,South Australia,878643.76,Water use,SA
+5,Western Australia,319556.38,Water use,WA
+6,Tasmania,425159.06,Water use,TAS
+7,Northern Territory,0,Water use,NT
+8,Australian Capital Territory,0,Water use,ACT

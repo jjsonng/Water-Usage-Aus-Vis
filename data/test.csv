@@ -1,0 +1,61 @@
+﻿Region code,Region label,Commodity description,Estimate,Number of agricultural businesses,Type,Category
+0,Australia,Area of holding - Total area (ha) (a),377002256.3,87779.35,Area of holding ,
+0,Australia,Number of agricultural businesses (no.),87779.35,87779.35,,
+0,Australia,Number of agricultural businesses irrigating (no.),20732.67,20732.67,,
+0,Australia,Water source - Total volume of water from all sources (ML) (b),6464546.16,48904.83,Water source ,
+0,Australia,Water source - Water taken from irrigation channels or irrigation pipelines - Total volume used (ML),2240777.84,7204.04,Water source ,Water taken from irrigation channels or irrigation pipelines 
+0,Australia,Water source - Water taken from on-farm dams or tanks - Total volume used (ML),541492.59,20270.82,Water source ,Water taken from on-farm dams or tanks
+0,Australia,"Water source - Water taken from rivers, creeks, lakes, etc. - Total volume used (ML)",1406309.91,9391.22,Water source ,"Water taken from rivers, creeks, lakes, etc. "
+0,Australia,"Water source - Water taken from rivers, creeks, lakes, etc. - Where a volumetric/usage charge occurs - Total volume used (ML)",1157611.44,4855.88,Water source ,"Water taken from rivers, creeks, lakes, etc. "
+0,Australia,"Water source - Water taken from rivers, creeks, lakes, etc. - Where there is no volumetric/usage charge - Total volume used (ML)",248698.47,4674.24,Water source ,"Water taken from rivers, creeks, lakes, etc. "
+0,Australia,"Water source - Groundwater (e.g. bores, springs, wells) - Total volume used (ML)",2104030.92,20776.32,Water source ,"Groundwater (e.g. bores, springs, wells) "
+0,Australia,"Water source - Recycled/re-used water from off-farm sources (e.g. re-use schemes, mines) - Total volume used (ML)",123999.95,1016.85,Water source ,"Recycled/reused water from off-farm sources (e.g. re-use schemes, mines) "
+0,Australia,Water source - Town or reticulated mains supply - Total volume used (ML),43447.05,5290.8,Water source ,Town or reticulated mains supply 
+0,Australia,Water source - Other sources of water (excluding rainfall) - Total volume used (ML),4487.89,105.8,Water source ,Other sources of water (excluding rainfall) 
+0,Australia,Water use - Total area watered (ha),1520939.6,20732.67,Water use ,
+0,Australia,Water use - Total volume applied (ML),5661146.86,20732.67,Water use ,
+0,Australia,Water use - Total application rate (ML/ha),3.72,..,Water use ,
+0,Australia,Water use - Pastures (including lucerne) and cereal crops used for grazing or fed off - Total area grown (ha),324778718.1,66941.93,Water use ,Pastures (including lucerne) and cereal crops used for grazing or fed off 
+0,Australia,Water use - Pastures (including lucerne) and cereal crops used for grazing or fed off - Area watered (ha),460671.43,5977.64,Water use ,Pastures (including lucerne) and cereal crops used for grazing or fed off 
+0,Australia,Water use - Pastures (including lucerne) and cereal crops used for grazing or fed off - Volume applied (ML),1260160.4,5977.64,Water use ,Pastures (including lucerne) and cereal crops used for grazing or fed off 
+0,Australia,Water use - Pastures (including lucerne) and cereal crops used for grazing or fed off - Application rate (ML/ha),2.74,..,Water use ,Pastures (including lucerne) and cereal crops used for grazing or fed off 
+0,Australia,"Water use - Pastures (including lucerne), cereal and other crops cut for hay and silage - Total area grown (ha)",2356057.57,25681.28,Water use ," Pastures (including lucerne), cereal and other crops cut for hay and silage "
+0,Australia,Water use - Pastures (including lucerne) and cereal crops cut for hay and silage - Area watered (ha),187905.4,3458.64,Water use ,Pastures (including lucerne) and cereal crops cut for hay and silage 
+0,Australia,Water use - Pastures (including lucerne) and cereal crops cut for hay and silage - Volume applied (ML),589213.4,3458.64,Water use ,Pastures (including lucerne) and cereal crops cut for hay and silage 
+0,Australia,Water use - Pastures (including lucerne) and cereal crops cut for hay and silage - Application rate (ML/ha),3.14,..,Water use ,Pastures (including lucerne) and cereal crops cut for hay and silage 
+0,Australia,Water use - Vegetables - Total area grown (ha),105145.77,3605.12,Water use ,Vegetables 
+0,Australia,Water use - Vegetables - Area watered (ha),87332.18,2993.07,Water use ,Vegetables 
+0,Australia,Water use - Vegetables - Volume applied (ML),356272.36,2993.07,Water use ,Vegetables 
+0,Australia,Water use - Vegetables - Application rate (ML/ha),4.08,..,Water use ,Vegetables 
+0,Australia,"Water use - Fruit trees, nut trees, plantation or berry fruits - Total area grown (ha)",200345.95,5748.76,Water use ,"Fruit trees, nut trees, plantation or berry fruits "
+0,Australia,"Water use - Fruit trees, nut trees, plantation or berry fruits - Area watered (ha)",172790,4230.48,Water use ,"Fruit trees, nut trees, plantation or berry fruits "
+0,Australia,"Water use - Fruit trees, nut trees, plantation or berry fruits - Volume applied (ML)",1071134.34,4230.48,Water use ,"Fruit trees, nut trees, plantation or berry fruits "
+0,Australia,"Water use - Fruit trees, nut trees, plantation or berry fruits - Application rate (ML/ha)",6.2,..,Water use ,"Fruit trees, nut trees, plantation or berry fruits "
+0,Australia,Water use - Grapevines - Total area grown (ha),136220.7,4087.46,Water use ,Grapevines 
+0,Australia,Water use - Grapevines - Area watered (ha),123986.51,3564.12,Water use ,Grapevines 
+0,Australia,Water use - Grapevines - Volume applied (ML),469295.85,3564.12,Water use ,Grapevines 
+0,Australia,Water use - Grapevines - Application rate (ML/ha),3.79,..,Water use ,Grapevines 
+0,Australia,"Water use - Nurseries, cut flowers and cultivated turf - Total area grown (ha)",15080.3,1954.39,Water use ,"Nurseries, cut flowers and cultivated turf "
+0,Australia,"Water use - Nurseries, cut flowers and cultivated turf - Area watered (ha)",11085.67,1446.13,Water use ,"Nurseries, cut flowers and cultivated turf "
+0,Australia,"Water use - Nurseries, cut flowers and cultivated turf - Volume applied (ML)",48939.06,1446.13,Water use ,"Nurseries, cut flowers and cultivated turf "
+0,Australia,"Water use - Nurseries, cut flowers and cultivated turf - Application rate (ML/ha)",4.41,..,Water use ,"Nurseries, cut flowers and cultivated turf "
+0,Australia,Water use - Rice - Total area grown (ha),5007.19,92.17,Water use ,Rice 
+0,Australia,Water use - Rice - Area watered (ha),5007.19,92.17,Water use ,Rice 
+0,Australia,Water use - Rice - Volume applied (ML),61033.39,92.17,Water use ,Rice 
+0,Australia,Water use - Rice - Application rate (ML/ha),12.19,..,Water use ,Rice 
+0,Australia,"Water use - Cereals for grain or seed, excluding rice - Total area grown (ha)",16118163.16,23062.16,Water use ,"Cereals for grain or seed, excluding rice "
+0,Australia,"Water use - Cereals for grain or seed, excluding rice - Area watered (ha)",158805.57,968.97,Water use ,"Cereals for grain or seed, excluding rice "
+0,Australia,"Water use - Cereals for grain or seed, excluding rice - Volume applied (ML)",381317.49,968.97,Water use ,"Cereals for grain or seed, excluding rice "
+0,Australia,"Water use - Cereals for grain or seed, excluding rice - Application rate (ML/ha)",2.4,..,Water use ,"Cereals for grain or seed, excluding rice "
+0,Australia,Water use - Cotton - Total area grown (ha) (c),69885.71,312.71,Water use ,Cotton 
+0,Australia,Water use - Cotton - Area watered (ha),54864.7,279.14,Water use ,Cotton 
+0,Australia,Water use - Cotton - Volume applied (ML),379601,279.14,Water use ,Cotton 
+0,Australia,Water use - Cotton - Application rate (ML/ha),6.92,..,Water use ,Cotton 
+0,Australia,Water use - Sugar cane - Total area grown (ha) (d),404167.55,3189.91,Water use ,Sugar cane 
+0,Australia,Water use - Sugar cane - Area watered (ha),189279.33,1553.16,Water use ,Sugar cane 
+0,Australia,Water use - Sugar cane - Volume applied (ML),886877.96,1553.16,Water use ,Sugar cane 
+0,Australia,Water use - Sugar cane - Application rate (ML/ha),4.69,..,Water use ,Sugar cane 
+0,Australia,Water use - Other crops n.e.c. - Total area grown (ha) (e),4479498.7,14318.35,Water use ,Other crops n.e.c.
+0,Australia,Water use - Other crops n.e.c. - Area watered (ha),69211.62,773.46,Water use ,Other crops n.e.c.
+0,Australia,Water use - Other crops n.e.c. - Volume applied (ML),157301.61,773.46,Water use ,Other crops n.e.c.
+0,Australia,Water use - Other crops n.e.c. - Application rate (ML/ha),2.27,..,Water use ,Other crops n.e.c.

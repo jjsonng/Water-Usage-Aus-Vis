@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 500,
+    "title": "Water Stations around Australia",
+    "projection": {"type": "equirectangular"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/aus_map.json",
+          "format": {"type": "topojson", "feature": "collection"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/waterStations.csv"
+        },
+        "mark": {"type": "circle"},
+        "encoding": {
+            "tooltip": [
+                {"field": "Station Name", "type": "nominal", "title": "Station Name"},
+                {"field": "Data Owner", "type": "nominal", "title": "Water Station Owner"}
+              ],
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
+          "color": {
+            "field": "Location",
+            "scale": {"scheme": "yellowgreenblue"}
+          }
+        } 
+      }
+    ]
+  }

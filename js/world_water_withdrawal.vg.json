@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 500,
+  "width": "container",
+  "title": "Total Water Withdrawal per Country (2017)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/world_water_withdrawal_clean.csv"
+  },
+    "params": [
+    {
+      "name": "Water_Withdrawal_Above",
+
+      "value": 0,
+      "bind": {"input": "range", "min": 0, "max": 700, "step": 10}
+    },
+    {
+      "name": "Continent_selection",
+      "bind":{
+        "input": "select",
+        "options": [
+          null,
+          "Americas",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels":[
+          "Show All",
+          "Americas",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform":[
+    {"filter": "datum.Withdrawal > Water_Withdrawal_Above"},
+    {"filter": "Continent_selection == null || datum.Continent == Continent_selection"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Area",
+      "type": "quantitative",
+      "title":"Total Area of Country (1000 ha)",
+      "axis": {"tickCount": 5},
+      "scale": {"type": "log", "domain":[10, 2000000]}
+    },
+    "y": {
+      "field": "Withdrawal",
+      "type": "quantitative",
+      "title":"Total Water Withdrawal (km^3)",
+      "axis": { "tickCount": 6},
+      "scale": {"type": "sqrt", "domain":[0, 800]}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Continent", "type": "nominal"},
+      {"field": "Area", "title": "Area (1000 ha)", "type": "quantitative", "format": ","},
+      {"field": "Withdrawal",  "title": "Withdrawal (km^3)", "type": "quantitative", "format": ","}
+    ]
+  },
+  "layer": [{
+    "mark": {
+      "type": "point"
+    }, "encoding": {
+    "size": {"field": "Withdrawal", "type": "quantitative",  "scale": {"range": [30, 500]}},
+    "fill": {"field": "Continent",  "type": "nominal","scale": {"domain":["Americas", "Europe", "Africa", "Asia", "Oceania"], "range": ["#63a7cd", "#7ccad4", "#b4e1ce", "#647db9", "#3ea593"]}},
+    "color": {"field": "Continent", "type": "nominal","scale": {"domain":["Americas", "Europe", "Africa", "Asia", "Oceania"],"range": ["#63a7cd", "#7ccad4", "#b4e1ce", "#647db9", "#3ea593"]}
+    }
+    }},
+      {
+      "transform":[
+        {"filter":"datum.Ranking==1"},
+        {
+          "calculate": "datum['Country']",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dx": 14,
+        "align": "left",
+        "fontSize": 17,
+        "fill": "black"
+
+      },
+      "encoding": {
+        "text": {"field": "text_annotation"}
+      }
+    }]
+}

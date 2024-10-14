@@ -1,0 +1,77 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 300, 
+    "title": "Water Usage on Farms",
+    "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/farm_water_usage.csv"},
+    "params": [
+      {
+        "name": "State_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Australia",
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory",
+            "Australian Capital Territory"
+          ],
+          "labels":[
+            "Australia",
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory",
+            "Australian Capital Territory"
+          ],
+          "name": "State Selection: "
+        }
+      },
+      {
+        "name": "Measurement_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Total area grown (ha)",
+            "Area watered (ha)",
+            "Volume applied (ML)"
+          ],
+          "labels":[
+            "Show All",
+            "Total area grown (ha)",
+            "Area watered (ha)",
+            "Volume applied (ML)"
+          ],
+          "name": "Measurement Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {"filter": "State_selection == null || datum.Region == State_selection"},
+      {"filter": "Measurement_selection == null || datum.Process == Measurement_selection"}
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "Category", "type": "nominal", "axis": null},
+      "y": {"aggregate": "sum", "field": "Estimate"},
+      "color": {
+        "field": "Category",
+        "scale": {"scheme": "yellowgreenblue"},
+        "legend": null
+      },
+      "tooltip": [
+        {"field": "Region", "type": "nominal", "title": "State"},
+        {"field": "Category", "type": "nominal"},
+        {"field": "Estimate", "type": "quantitative", "title": "Amount", "format": ","}
+      ]
+    }
+  }
+  
