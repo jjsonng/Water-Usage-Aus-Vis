@@ -38,3 +38,10 @@
     font-weight: bold;
     color: #647db9;
   }
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
