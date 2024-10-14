@@ -14,6 +14,12 @@
     },
     {
       "data": {
+        "graticule": {"extent": [[110, -45], [155, -10]]}
+      },
+      "mark": {"type": "geoshape", "stroke": "lightgray", "strokeWidth": 0.5}
+    },
+    {
+      "data": {
         "url": "https://raw.githubusercontent.com/jjsonng/Water-Usage-Aus-Vis/main/data/water_stations_centroids.csv"
       },
       "mark": {"type": "circle"},
