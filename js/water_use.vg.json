@@ -1,49 +1,56 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width":"container",
-    "height": 300,
-    "title": "Water Use within Australia",
-    "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/water_use_cleaned.csv"},
-    "params": [
-        {
-          "name": "Industry_selection",
-          "bind": {
-            "input": "select",
-            "options": [
-              null,
-              "Total Agriculture, forestry and fishing",
-              "Total Electricity, gas, water and waste services",
-              "Total mining"
-            ],
-            "labels":[
-              "Combined Total",
-              "Total Agriculture, forestry and fishing",
-              "Total Electricity, gas, water and waste services",
-              "Total mining"
-            ],
-            "name": "Industry Selection: "
-          }
-        }
-      ],
-      "transform": [
-        {"filter": "Industry_selection == null || datum.Industry == Industry_selection"},
-        {"calculate": "log(datum.Value)/log(10)", "as": "log_y"}
-      ],
-    "mark": {
-      "type": "line",
-      "point": true
-      },
-    "encoding": {
-      "x": {"timeUnit": "year", "field": "Date", "type": "ordinal"},
-      "y": {"aggregate":"sum", "field": "Value", "type": "quantitative", "title": "ML"},
-      "color": {
-        "field": "State",
-        "scale": {"domain":["Australian Capital Territory", "New South Wales", "Northern Territory", "Queensland", "South Australia", "Tasmania", "Victoria", "Western Australia"],
-      "range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255"]}
-      },
-      "tooltip": [
-        {"field": "State", "type": "nominal", "title": "Region"},
-        {"field": "Value", "type": "quantitative", "title": "ML", "aggregate": "sum", "format": ","}
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 300,
+  "title": "Water Use within Australia",
+  "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/water_use_cleaned.csv"},
+  "params": [
+    {
+      "name": "Industry_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Total Agriculture, forestry and fishing",
+          "Total Electricity, gas, water and waste services",
+          "Total mining"
+        ],
+        "labels": [
+          "Combined Total",
+          "Total Agriculture, forestry and fishing",
+          "Total Electricity, gas, water and waste services",
+          "Total mining"
+        ],
+        "name": "Select Industry: "
+      }
     }
+  ],
+  "transform": [
+    {"filter": "Industry_selection == null || datum.Industry == Industry_selection"},
+    {"calculate": "log(datum.Value)/log(10)", "as": "log_y"},
+    {
+      "calculate": "datum.State == 'Australian Capital Territory' ? 'ACT' : datum.State == 'New South Wales' ? 'NSW' : datum.State == 'Northern Territory' ? 'NT' : datum.State == 'Queensland' ? 'QLD' : datum.State == 'South Australia' ? 'SA' : datum.State == 'Tasmania' ? 'TAS' : datum.State == 'Victoria' ? 'VIC' : datum.State == 'Western Australia' ? 'WA' : datum.State",
+      "as": "State_Abbr"
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {"timeUnit": "year", "field": "Date", "type": "ordinal"},
+    "y": {"aggregate": "sum", "field": "Value", "type": "quantitative", "title": "ML"},
+    "color": {
+      "field": "State_Abbr",
+      "scale": {
+        "domain": ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"],
+        "range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255"]
+      },
+      "title": "State"
+    },
+    "tooltip": [
+      {"field": "State_Abbr", "type": "nominal", "title": "Region"},
+      {"field": "Value", "type": "quantitative", "title": "ML", "aggregate": "sum", "format": ","}
+    ]
   }
+}
