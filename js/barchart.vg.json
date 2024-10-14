@@ -4,8 +4,8 @@
     "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/data2.csv"
   },
   "title": "Distributed Water Use by Selected Industries and Households, Australia",
-  "width": 500,
-  "height": 300,
+  "width": 1000,
+  "height": 600,
   "params": [
     {
       "name": "Industry_selection",
@@ -56,7 +56,7 @@
               "Households",
               "Agriculture, forestry and fishing"
             ],
-            "range": ["#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288"]
+            "range": ["#332288","#117733","#CC6677","#DDCC77","#88CCEE"]
           },
           "legend": {
             "title": "Industry",
@@ -107,27 +107,6 @@
     },
     {
       "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 5,
-        "dy": -5
-      },
-      "encoding": {
-        "x": {"field": "Year", "type": "ordinal"},
-        "y": {"field": "Value", "type": "quantitative"},
-        "text": {"field": "Value", "type": "quantitative", "format": ".2f"},
-        "color": {"value": "black"}
-      },
-      "transform": [
-        {"filter": "datum.Year == '2020-2021'"},
-        {
-          "filter": "Industry_selection == null || datum.Industry == Industry_selection"
-        }
-      ]
-    },
-    {
-      "mark": {
         "type": "rule",
         "strokeDash": [4, 4],
         "color": "red"
@@ -142,7 +121,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -5,
-        "dy": -5,
+        "dy": -10,
         "fontSize": 9
       },
       "encoding": {
