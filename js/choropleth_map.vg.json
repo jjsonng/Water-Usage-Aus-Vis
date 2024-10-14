@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 550,
+  "width": "container",
   "height": 300,
   "title": "Water Use per Capita by State/Territory in Australia (2021-22)",
   "projection": {
