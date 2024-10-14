@@ -9,7 +9,7 @@
       "y": {"field": "Estimate", "type": "quantitative", "title": "ML & ha"},
       "color": {
         "field": "Region",
-        "scale": {"scheme": "yellowgreenblue"},
+        "scale": {"range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255"]},
         "legend": null
       },
       "tooltip": [
