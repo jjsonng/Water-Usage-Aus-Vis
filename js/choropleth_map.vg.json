@@ -10,6 +10,18 @@
   },
   "layer": [
     {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ccc",
+        "strokeWidth": 0.5
+      },
+      "data": {
+        "graticule": {
+          "step": [10, 10]
+        }
+      }
+    },
+    {
       "data": {
         "url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/js/ne_1.json",
         "format": {
