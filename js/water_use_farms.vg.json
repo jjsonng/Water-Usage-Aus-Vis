@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
+  "width": 600,
   "height": 400,
   "title": "Water Usage on Farms",
   "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/farm_water_usage.csv"},
@@ -84,12 +84,21 @@
           "field": "Category", 
           "type": "nominal", 
           "sort": "-x", 
-          "axis": {"labelAngle": 0} 
+          "axis": {
+            "labelAngle": 0,
+            "title": "Category",
+            "titlePadding": 40,
+            "titleFontWeight": "bold"
+          }
         },
         "x": {
           "field": "TotalEstimate", 
           "type": "quantitative", 
-          "axis": {"title": "Water Usage"},
+          "axis": {
+            "title": "Water Usage",
+            "titlePadding": 20,
+            "titleFontWeight": "bold"
+          },
           "scale": {"zero": false}
         },
         "color": {
@@ -106,17 +115,18 @@
     {
       "mark": {
         "type": "text",
-        "align": "left",
+        "align": "right",
         "baseline": "middle",
-        "dx": 5,
-        "fontWeight": "bold"
+        "dx": -5,
+        "fontWeight": "bold",
+        "color": "white"
       },
       "encoding": {
         "y": {"field": "Category", "type": "nominal", "sort": "-x"},
         "x": {"field": "TotalEstimate", "type": "quantitative"},
         "text": {"field": "TotalEstimate", "type": "quantitative", "format": ".2s"},
         "opacity": {
-          "condition": {"test": "datum.rank == 1", "value": 1},
+          "condition": {"test": "datum.rank <= 1", "value": 1},
           "value": 0
         }
       }
