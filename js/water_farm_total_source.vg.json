@@ -1,35 +1,35 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
-    "height": 300, 
-    "title": "Total Water Source on Farms per State",
-    "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/water_farm_total_source.csv"},
-    "encoding": {
-      "x": {"field": "Region", "type": "nominal", "title": "State", "axis": null},
-      "y": {"field": "Estimate", "type": "quantitative", "title": "ML & ha"},
-      "color": {
-        "field": "Region",
-        "scale": {"range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255"]},
-        "legend": null
-      },
-      "tooltip": [
-        {"field": "Region", "type": "nominal", "title": "State"},
-        {"field": "Estimate", "type": "quantitative", "title": "Amount (ML & ha)", "format": ","}
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 300, 
+  "title": "Total Water Source on Farms per State",
+  "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/water_farm_total_source.csv"},
+  "encoding": {
+    "x": {"field": "Region", "type": "nominal", "title": "State", "axis": null},
+    "y": {"field": "Estimate", "type": "quantitative", "title": "ML & ha", "axis": {"titlePadding": 20}},
+    "color": {
+      "field": "Region",
+      "scale": {"range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255"]},
+      "legend": null
     },
-    "layer": [{
-      "mark": "bar"
-    }, {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dy": -5,
-        "dx": -9,
-        "fill": "black"
-      },
-      "encoding": {
-        "text": {"field": "Abb", "type": "nominal"}
-      }
-    }]
-  }
+    "tooltip": [
+      {"field": "Region", "type": "nominal", "title": "State"},
+      {"field": "Estimate", "type": "quantitative", "title": "Amount (ML & ha)", "format": ","}
+    ]
+  },
+  "layer": [{
+    "mark": "bar"
+  }, {
+    "mark": {
+      "type": "text",
+      "align": "left",
+      "baseline": "middle",
+      "dy": -5,
+      "dx": -9,
+      "fill": "black"
+    },
+    "encoding": {
+      "text": {"field": "Abb", "type": "nominal"}
+    }
+  }]
+}
