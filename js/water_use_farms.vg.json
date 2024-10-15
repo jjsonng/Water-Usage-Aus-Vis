@@ -87,7 +87,7 @@
           "axis": {
             "labelAngle": 0,
             "title": "Category",
-            "titlePadding": 40,
+            "titlePadding": 20,
             "titleFontWeight": "bold"
           }
         },
