@@ -1,76 +1,125 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
-    "height": 300, 
-    "title": "Water Usage on Farms",
-    "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/farm_water_usage.csv"},
-    "params": [
-      {
-        "name": "State_selection",
-        "bind": {
-          "input": "select",
-          "options": [
-            "Australia",
-            "New South Wales",
-            "Victoria",
-            "Queensland",
-            "South Australia",
-            "Western Australia",
-            "Tasmania",
-            "Northern Territory",
-            "Australian Capital Territory"
-          ],
-          "labels":[
-            "Australia",
-            "New South Wales",
-            "Victoria",
-            "Queensland",
-            "South Australia",
-            "Western Australia",
-            "Tasmania",
-            "Northern Territory",
-            "Australian Capital Territory"
-          ],
-          "name": "State: "
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "title": "Water Usage on Farms",
+  "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/farm_water_usage.csv"},
+  "params": [
+    {
+      "name": "State_selection",
+      "value": "Australia",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Australia",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory",
+          "Australian Capital Territory"
+        ],
+        "labels":[
+          "Australia",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory",
+          "Australian Capital Territory"
+        ],
+        "name": "State: "
+      }
+    },
+    {
+      "name": "Measurement_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Total area grown (ha)",
+          "Area watered (ha)",
+          "Volume applied (ML)"
+        ],
+        "labels":[
+          "Show All",
+          "Total area grown (ha)",
+          "Area watered (ha)",
+          "Volume applied (ML)"
+        ],
+        "name": "Measurement: "
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "parseFloat(datum.Estimate)", "as": "EstimateNumber"},
+    {"filter": "!isNaN(datum.EstimateNumber)"},
+    {"filter": "datum.Region == State_selection"},
+    {"filter": "Measurement_selection == null || datum.Process == Measurement_selection"},
+    {
+      "aggregate": [{
+        "op": "sum",
+        "field": "Estimate",
+        "as": "TotalEstimate"
+      }],
+      "groupby": ["Category"]
+    },
+    {
+      "window": [{
+        "op": "rank",
+        "as": "rank"
+      }],
+      "sort": [{"field": "TotalEstimate", "order": "descending"}]
+    }
+  ],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Category", 
+          "type": "nominal", 
+          "sort": "-x", 
+          "axis": {"labelAngle": 0} 
+        },
+        "x": {
+          "field": "TotalEstimate", 
+          "type": "quantitative", 
+          "axis": {"title": "Water Usage"},
+          "scale": {"zero": false}
+        },
+        "color": {
+          "field": "Category",
+          "scale": {"range": ["#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255", "#888888"]},
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "Category", "type": "nominal"},
+          {"field": "TotalEstimate", "type": "quantitative", "title": "Amount", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "fontWeight": "bold"
       },
-      {
-        "name": "Measurement_selection",
-        "bind": {
-          "input": "select",
-          "options": [
-            null,
-            "Total area grown (ha)",
-            "Area watered (ha)",
-            "Volume applied (ML)"
-          ],
-          "labels":[
-            "Show All",
-            "Total area grown (ha)",
-            "Area watered (ha)",
-            "Volume applied (ML)"
-          ],
-          "name": "Measurement: "
+      "encoding": {
+        "y": {"field": "Category", "type": "nominal", "sort": "-x"},
+        "x": {"field": "TotalEstimate", "type": "quantitative"},
+        "text": {"field": "TotalEstimate", "type": "quantitative", "format": ".2s"},
+        "opacity": {
+          "condition": {"test": "datum.rank == 1", "value": 1},
+          "value": 0
         }
       }
-    ],
-    "transform": [
-      {"filter": "State_selection == null || datum.Region == State_selection"},
-      {"filter": "Measurement_selection == null || datum.Process == Measurement_selection"}
-    ],
-    "mark": "bar",
-    "encoding": {
-      "x": {"field": "Category", "type": "nominal", "axis": null},
-      "y": {"aggregate": "sum", "field": "Estimate", "axis": {"title": "Water Usage"}},
-      "color": {
-        "field": "Category",
-        "scale": {"range": ["#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255","#888888"]},
-        "legend": {"title": "Categories"}
-      },
-      "tooltip": [
-        {"field": "Category", "type": "nominal"},
-        {"field": "Estimate", "type": "quantitative", "title": "Amount", "format": ","}
-      ]
     }
-  }
-  
+  ]
+}
