@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
+  "width": "container",
   "height": 300,
   "title": "Water Stations around Australia",
   "projection": {"type": "equirectangular"},
