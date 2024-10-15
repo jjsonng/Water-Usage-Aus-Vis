@@ -46,14 +46,14 @@
       "field": "Area",
       "type": "quantitative",
       "title":"Total Area of Country (1000 ha)",
-      "axis": {"tickCount": 5},
+      "axis": {"tickCount": 5, "titlePadding": 20},
       "scale": {"type": "log", "domain":[10, 2000000]}
     },
     "y": {
       "field": "Withdrawal",
       "type": "quantitative",
       "title":"Total Water Withdrawal (km^3)",
-      "axis": { "tickCount": 6},
+      "axis": { "tickCount": 6, "titlePadding": 20},
       "scale": {"type": "sqrt", "domain":[0, 800]}
     },
     "tooltip": [
