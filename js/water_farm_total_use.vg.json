@@ -6,7 +6,7 @@
     "data": {"url": "https://raw.githubusercontent.com/jjsonng/Australia_Water-Usage_Vega-Lite/main/data/water_farm_total_use.csv"},
     "encoding": {
       "x": {"field": "Region", "type": "nominal", "title": "State", "axis": null},
-      "y": {"field": "Estimate", "type": "quantitative", "title": "ML & ha"},
+      "y": {"field": "Estimate", "type": "quantitative", "title": "ML & ha", "axis": {"titlePadding": 20}},
       "color": {
         "field": "Region",
         "scale": {"range": ["#88CCEE", "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99", "#999933", "#882255"]},
