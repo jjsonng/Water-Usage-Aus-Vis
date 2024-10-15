@@ -22,9 +22,11 @@
   }
   .description-right {
     padding-left: 20px;
+    max-width: 800px;
   }
   .description-left{
     padding-right: 20px;
+    max-width: 800px;
   }
   .pure-g{
     margin-bottom: 70px;
