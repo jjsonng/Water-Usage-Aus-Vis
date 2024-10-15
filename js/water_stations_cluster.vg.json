@@ -3,8 +3,24 @@
   "width": "container",
   "height": 300,
   "title": "Water Stations around Australia",
-  "projection": {"type": "equirectangular"},
+  "projection": {
+    "type": "equirectangular",
+    "center": [133, -28],
+    "scale": 480
+  },
   "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ccc",
+        "strokeWidth": 0.5
+      },
+      "data": {
+        "graticule": {
+          "step": [10, 10]
+        }
+      }
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/jjsonng/Water-Usage-Aus-Vis/main/data/aus_map.json",
