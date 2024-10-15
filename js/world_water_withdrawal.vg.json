@@ -11,7 +11,7 @@
       "name": "Water_Withdrawal_Above",
 
       "value": 0,
-      "bind": {"input": "range", "min": 0, "max": 700, "step": 10, "name": "Water Withdrawal"}
+      "bind": {"input": "range", "min": 0, "max": 700, "step": 10, "name": "Water Withdrawal Above"}
     },
     {
       "name": "Continent_selection",
