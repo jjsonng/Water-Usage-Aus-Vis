@@ -38,8 +38,8 @@
     "point": true
   },
   "encoding": {
-    "x": {"timeUnit": "year", "field": "Date", "type": "ordinal"},
-    "y": {"aggregate": "sum", "field": "Value", "type": "quantitative", "title": "ML"},
+    "x": {"timeUnit": "year", "field": "Date", "type": "ordinal", "axis": {"titlePadding": 20}},
+    "y": {"aggregate": "sum", "field": "Value", "type": "quantitative", "title": "ML", "axis": {"titlePadding": 20}},
     "color": {
       "field": "State_Abbr",
       "scale": {
