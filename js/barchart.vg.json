@@ -38,12 +38,12 @@
         "x": {
           "field": "Year",
           "type": "ordinal",
-          "axis": {"labelAngle": 0}
+          "axis": {"labelAngle": 0,"titlePadding": 20}
         },
         "y": {
           "field": "Value",
           "type": "quantitative",
-          "axis": {"title": "Water Usage"}
+          "axis": {"title": "Water Usage","titlePadding": 20}
         },
         "color": {
           "field": "Industry",
