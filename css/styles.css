@@ -1,18 +1,31 @@
+  /* Header Styles */
+  .site-header {
+    background-color: #2c3e50;
+    padding: 60px 40px;
+    margin: -60px -60px 50px -60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
   .heading{
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-    font-size: 50px;
+    font-weight: 700;
+    font-size: 48px;
     text-align: center;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
   }
+
   body{
-     background-color: lightgray;
+     background-color: #f5f5f5;
    }
   .page{
-     width: 1200px;    
+     max-width: 1200px;    
      background-color: white;   
      margin: auto;
      padding: 60px;
      padding-top: 35px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   .vis-container{
     width: 100%;
@@ -34,8 +47,36 @@
     padding-right: 40px;
     max-width: 800px;
   }
+  /* Section Styles */
+  .content-section {
+    margin-bottom: 80px;
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .content-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin: 0 0 40px 0;
+  }
+
+  .subsection-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #34495e;
+    text-align: center;
+    margin: 40px 0 30px 0;
+  }
+
   .pure-g{
-    margin-bottom: 70px;
+    margin-bottom: 0;
   }
   .small-font{
       font-size: 12px;
@@ -51,9 +92,58 @@ p {
   text-align: justify;
 }
 
+/* Footer Styles */
 footer {
-    background-color: lightgray;
+    background-color: #2c3e50;
+    color: #ffffff;
     text-align: center;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding: 50px 30px;
+    margin-top: 60px;
+    margin-left: -60px;
+    margin-right: -60px;
+    margin-bottom: -60px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+footer small {
+    display: block;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+footer .footer-links {
+    margin-top: 25px;
+}
+
+footer .footer-links small {
+    display: block;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+footer .footer-links small strong {
+    margin-right: 8px;
+}
+
+footer a {
+    color: #5dade2;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #85c1e9;
+    text-decoration: underline;
 }
